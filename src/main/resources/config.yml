@@ -1,0 +1,4 @@
+prefix: "&cStaff &8»&r"
+enable-message: "{PREFIX} &aStaffchat &nEnabled"
+disable-message: "{PREFIX} &cStaffchat &nDisabled"
+message-format: "{PREFIX} {PLAYER}&f:&r {MESSAGE}"
