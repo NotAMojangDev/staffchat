@@ -1,4 +1,4 @@
-package io.notamojangdev.staffchat;
+package dev.namd.staffchat;
 
 import io.papermc.paper.event.player.AsyncChatEvent;
 import net.kyori.adventure.text.Component;
@@ -7,9 +7,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
-
-import java.util.UUID;
 
 public class ChatEvent implements Listener {
 

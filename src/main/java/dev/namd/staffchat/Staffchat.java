@@ -1,4 +1,4 @@
-package io.notamojangdev.staffchat;
+package dev.namd.staffchat;
 
 import co.aikar.commands.PaperCommandManager;
 import net.kyori.adventure.text.TextComponent;

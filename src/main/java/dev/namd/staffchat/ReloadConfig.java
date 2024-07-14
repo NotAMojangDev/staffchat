@@ -1,8 +1,7 @@
-package io.notamojangdev.staffchat;
+package dev.namd.staffchat;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
-import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;

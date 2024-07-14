@@ -1,4 +1,4 @@
-package io.notamojangdev.staffchat;
+package dev.namd.staffchat;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
