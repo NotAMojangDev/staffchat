@@ -1,6 +1,8 @@
 package dev.namd.staffchat;
 
 import co.aikar.commands.PaperCommandManager;
+import dev.namd.staffchat.commands.ReloadConfigCommand;
+import dev.namd.staffchat.commands.StaffChatCommand;
 import net.kyori.adventure.text.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -28,7 +30,7 @@ public final class Staffchat extends JavaPlugin {
     @Override
     public void onEnable() {
         PermissionNode = "staffchat.use";
-        staffchatEnabled = new ArrayList<UUID>();
+        staffchatEnabled = new ArrayList<>();
 
         this.saveDefaultConfig();
         updateConfig();
@@ -57,7 +59,7 @@ public final class Staffchat extends JavaPlugin {
         MessageFormat =
                 ChatUtils.colorizeAll(
                     Objects.requireNonNull(Config.getString("message-format"))
-                            .replace("{PREFIX}", prefix)
+                            .replace("{PREFIX}" , prefix)
                 );
     }
 
@@ -80,8 +82,8 @@ public final class Staffchat extends JavaPlugin {
     private void registerCommands() {
         PaperCommandManager manager = new PaperCommandManager(this);
 
-        manager.registerCommand(new staffChatCommand());
-        manager.registerCommand(new ReloadConfig());
+        manager.registerCommand(new StaffChatCommand());
+        manager.registerCommand(new ReloadConfigCommand());
     }
 
 }

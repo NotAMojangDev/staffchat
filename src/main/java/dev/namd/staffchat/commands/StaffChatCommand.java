@@ -1,18 +1,19 @@
-package dev.namd.staffchat;
+package dev.namd.staffchat.commands;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
+import dev.namd.staffchat.ChatUtils;
+import dev.namd.staffchat.Staffchat;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
-import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-@CommandAlias("staffchat|schat|sc")
+@CommandAlias("staffchat|schat|sc") // Annotation Command Framework
 @CommandPermission("staffchat.use")
 @Description("Use the staffchat")
-public class staffChatCommand extends BaseCommand {
+public class StaffChatCommand extends BaseCommand {
 
     @Dependency
     private final Staffchat main = Staffchat.getInstance();
@@ -20,9 +21,7 @@ public class staffChatCommand extends BaseCommand {
     @Default
     @CommandCompletion("@players")
     public void onDefault(@NotNull CommandSender sender, String[] args) {
-
-
-        String name = sender instanceof Player ? ((TextComponent) ((Player) sender).displayName()).content() : ChatColor.RED + "Console";
+        String name = sender instanceof Player ? ((TextComponent) ((Player) sender).displayName()).content() : "§cConsole";
         if (args.length < 1) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
